@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr, Field, ConfigDict
 from typing import List, Optional
 from datetime import datetime
 
@@ -12,6 +12,8 @@ class BulkCertificateRequest(BaseModel):
     recipients: List[RecipientData]
 
 class ItemResponse(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
     id: str
     recipient_name: str
     recipient_email: str
@@ -20,17 +22,13 @@ class ItemResponse(BaseModel):
     file_path: Optional[str] = None
     error_message: Optional[str] = None
 
-    class Config:
-        from_attributes = True
-
 class JobStatusResponse(BaseModel):
-    job_id: str
+    model_config = ConfigDict(from_attributes=True)
+
+    job_id: str = Field(..., validation_alias="id")
     status: str
     total_count: int
     success_count: int
     failed_count: int
     created_at: datetime
     items: List[ItemResponse]
-
-    class Config:
-        from_attributes = True
