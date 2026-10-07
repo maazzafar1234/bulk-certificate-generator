@@ -6,6 +6,10 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Bulk Certificate Generator API")
 
+@app.get("/")
+def root():
+    return {"message": "Welcome to Bulk Certificate Generator API. Visit /docs for documentation."}
+
 app.include_router(router, prefix="/api")
 
 if __name__ == "__main__":
