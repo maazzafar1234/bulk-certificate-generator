@@ -17,7 +17,7 @@ A robust, production-ready FastAPI backend application designed to generate, val
 
 ## 📁 Project Structure
 
-
+```text
 bulk-certificate-generator/
 │
 ├── app/
@@ -49,8 +49,7 @@ bulk-certificate-generator/
 ├── main.py                       # Main application entry point
 ├── README.md                     # Project documentation
 └── requirements.txt              # Project dependencies
-
----
+```
 
 🚀 Step-by-Step Setup Guide
 Follow these steps to set up the project on your machine:
