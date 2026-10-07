@@ -50,8 +50,9 @@ bulk-certificate-generator/
 ├── README.md                     # Project documentation
 └── requirements.txt              # Project dependencies
 ```
+---
 
-🚀 Step-by-Step Setup Guide
+## 🚀 Step-by-Step Setup Guide
 Follow these steps to set up the project on your machine:
 
 Prerequisites
@@ -81,7 +82,11 @@ Install all required libraries using requirements.txt:
 
 Bash
 pip install -r requirements.txt
-💻 How to Run the Application
+
+---
+
+## 💻 How to Run the Application
+
 Start the live FastAPI server by running:
 
 Bash
@@ -111,7 +116,10 @@ collected 2 items
 tests\test_main.py ..                                                    [100%]
 
 =============================== 2 passed in 0.76s ===============================
-📖 How to Generate & Download Certificates (Non-Technical User Guide)
+
+---
+
+## 📖 How to Generate & Download Certificates (Non-Technical User Guide)
 You don't need Postman or code to use this API. You can test and download certificates directly in your browser using the built-in Swagger UI.
 
 Step 1: Open the Interactive Web Page
@@ -194,7 +202,9 @@ Click Execute.
 
 Click Download file in the response section to download and open your generated PDF certificate directly in your browser or local PDF reader!
 
-📐 Important Architecture & Design Decisions
+---
+
+## 📐 Important Architecture & Design Decisions
 Fault Isolation Architecture:
 
 Bulk requests run each recipient through an isolated try-except block during processing.
